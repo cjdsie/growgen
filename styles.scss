@@ -987,46 +987,48 @@ img.full {
 .slider {
   display: block;
   position: relative;
-  min-height: 400px;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
-  @media only screen and (min-width: 47em) {
-    min-height: 600px;
-  }
 
   .slider-item {
     position: relative;
   }
 
   .slider-bg {
+    background-size: cover;
     position: relative;
     display: block;
     z-index: 1;
-    min-height: 400px;
-    object-fit: cover;
-    @media only screen and (min-width: 47em) {
-      min-height: 600px;
-    }
+    height: 600px;
+
   }
   .slider-caption {
+    color: #fff;
     position: absolute;
-    top: 15%;
-    left: 10%;
-    right: 10%;
-    width: 60%;
-    margin: 0 auto;
+    display: block;
+    line-height: 1;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    width: 100%;
+    vertical-align:middle;
+    margin: 0 auto;
     z-index: 1000;
-
-    @media only screen and (min-width: 48em) {
-      top: 10%;
-      width: 100%;
-      left: auto;
-      right: auto;
-    }
 
     img {
       width: auto;
       margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .slider-caption > img {
+      top: 25%;
     }
   }
 
@@ -1131,6 +1133,16 @@ img.full {
   }
 }
 
+/* Management Team Block */
+
+.management-team {
+  text-align: left;
+
+  .col-xs {
+    text-align: left;
+  }
+}
+
 /* #Products */
 
 .product-grid {
@@ -1157,9 +1169,10 @@ img.full {
 
   .overlay {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 0;
     right: 0;
+    transform: translate(0, -50%);
     text-align: center;
     padding-right: .5rem;
     padding-left: .5rem;
