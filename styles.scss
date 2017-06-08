@@ -1031,6 +1031,77 @@ img.full {
   color: $colorBeige;
 }
 
+/* Location Map Panels */
+
+.location-search {
+  position: relative;
+  display: block;
+}
+
+.location-map {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.location-panel {
+  width: 20%;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0, .5);
+  z-index: 1000;
+
+  .location-header {
+    text-align: center;
+    padding: $gutter/3 $gutter/2;
+    position: block;
+
+    h3 {
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+    }
+
+  }
+
+  .location-list {
+    @extend .no-bullets;
+    margin-top: $gutter;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    li {
+      a {
+        color: $colorBodyText;
+        display: block;
+        padding: $gutter/3 $gutter/2;
+        &:hover {
+          background: $colorBodyText;
+          color: $colorBeige;
+          .retailer, .retailer-address {
+            color: $colorBeige;
+          }
+        }
+        .retailer, .retailer-address {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
 /* #Products */
 
 .product-grid {
