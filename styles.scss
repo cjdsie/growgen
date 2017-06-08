@@ -585,10 +585,10 @@ html input[disabled] {
 
 .btn {
   font-family: $fontHeader;
-  display: inline-block;
+  display: block;
   padding: 8px ($gutter/1.5);
   width: auto;
-  margin: 0;
+  margin: 0 0 $gutter/2;
   line-height: 1.42;
   font-weight: 500;
   text-decoration: none;
@@ -606,6 +606,11 @@ html input[disabled] {
   color: $colorBeige;
   transition: background 0.2ms ease-in;
   outline: none;
+
+  @media only screen and (min-width: 47em) {
+    display: inline-block;
+    margin: 0;
+  }
 
   &:hover,
   &:focus,
@@ -978,8 +983,11 @@ img.full {
 .slider {
   display: block;
   position: relative;
-
+  min-height: 400px;
   overflow: hidden;
+  @media only screen and (min-width: 47em) {
+    min-height: 600px;
+  }
 
   .slider-item {
     position: relative;
@@ -989,15 +997,28 @@ img.full {
     position: relative;
     display: block;
     z-index: 1;
+    min-height: 400px;
     object-fit: cover;
+    @media only screen and (min-width: 47em) {
+      min-height: 600px;
+    }
   }
   .slider-caption {
     position: absolute;
-    top: 5%;
-    width: 100%;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    width: 60%;
     margin: 0 auto;
     text-align: center;
     z-index: 1000;
+
+    @media only screen and (min-width: 48em) {
+      top: 10%;
+      width: 100%;
+      left: auto;
+      right: auto;
+    }
 
     img {
       width: auto;
@@ -1035,7 +1056,11 @@ img.full {
 
 .location-search {
   position: relative;
-  display: block;
+  display: none;
+
+  @media only screen and (min-width: 52em) {
+    display: block;
+  }
 }
 
 .location-map {
