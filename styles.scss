@@ -647,9 +647,13 @@ html input[disabled] {
 }
 
 .btn-large {
-  padding-left: $gutter* 3;
-  padding-right: $gutter*3;
+  text-align: center;
   font-size: 2rem;
+
+  @media only screen and (min-width: 48em){
+    padding-left: $gutter* 3;
+    padding-right: $gutter*3;
+  }
 }
 
 .btn-full {
