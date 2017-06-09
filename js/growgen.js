@@ -46,5 +46,13 @@ $(document).ready(function(){
         items: 1
       }
     }
-  })
+  });
+
+  $("[data-fancybox]").fancybox({
+		// Options will go here
+    animationEffect : "zoom",
+    // Duration in ms for open/close animation
+	  animationDuration : 366,
+    zoomOpacity : 'auto',
+	});
 });

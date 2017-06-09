@@ -941,7 +941,7 @@ img.full {
   }
   &.desktop-nav {
     display: none;
-    @media only screen and (min-width: 52em) {
+    @media only screen and (min-width: 53em) {
       display: block;
     }
   }
@@ -957,7 +957,7 @@ img.full {
     width: auto;
     margin-top: 0;
   }
-  @media only screen and (min-width: 52em) {
+  @media only screen and (min-width: 53em) {
     display: none;
   }
 
@@ -980,32 +980,64 @@ img.full {
     }
   }
 
-  button {
+  .menu-btn {
     background: $colorBodyText;
     color: #fff;
-    font-size: 1.6rem;
-    padding: 5px 40px;
+    font-size: 1.8rem;
+    font-family: $fontBody;
     font-weight: 600;
+    vertical-align: middle;
+    text-align: center;
     border: none;
+    padding: 20px 2.5px;
+    outline: none;
 
     &:hover {
       background: $colorButtonPrimary;
+      outline: none;
+    }
+    &:focus,
+    &:active {
+      outline: none;
     }
 
-    @media only screen and (min-width: 52em) {
+    @media only screen and (min-width: 48em) {
       float: none;
       border: 1px solid $colorBodyText;
       color: $colorBodyText;
       background: transparent;
+      padding: 10px 2.5px;
 
       &:hover {
         border: 1px solid $colorButtonPrimary;
-        color: $colorButtonPrimary
+        color: $colorButtonPrimary;
+        background: transparent;
       }
     }
   }
 }
 
+#mobile-nav {
+  display: none;
+  width: 95%;
+  text-align: center;
+  font-size: 1.85rem;
+
+  li a {
+    text-transform: uppercase;
+    font-weight: 600;
+    &:hover {
+      color: darken($colorButtonPrimary, 20%);
+      text-decoration: underline;
+    }
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+  }
+
+}
 
 
 /* #Content blocks */
