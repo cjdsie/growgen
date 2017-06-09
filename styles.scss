@@ -621,7 +621,7 @@ html input[disabled] {
   vertical-align: middle;
   white-space: nowrap;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid $colorBeige;
   @include user-select(none);
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1202,7 +1202,7 @@ img.full {
 
     .grid-content {
       padding: $gutter/2;
-
+      background-color: rgba($colorBeige, .35);
       text-align: left;
       h3 {
         margin-top: 0;
