@@ -690,6 +690,10 @@ ul, ol {
   .no-bullets {
     list-style: none outside;
     margin-left: 0;
+
+    li {
+      margin-bottom: $gutter/2;
+    }
   }
 
   .inline-list {
@@ -1137,9 +1141,23 @@ img.full {
 
 .management-team {
   text-align: left;
-
-  .col-xs {
+  margin-bottom: $gutter*2.5;
+  .team-profile {
     text-align: left;
+    border-radius: $borderRadius;
+    border: 1px solid rgba($colorBodyText, .1);
+    box-shadow: -5px 5px 15px rgba(0,0,0, .1);
+  }
+  .team-content {
+    padding-bottom: $gutter/3;
+
+    h3{
+      margin-bottom: 0;
+    }
+    h4 {
+      margin-top: 0;
+    }
+
   }
 }
 
