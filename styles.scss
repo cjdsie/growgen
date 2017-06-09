@@ -561,6 +561,30 @@ sub {
 
 .small { @extend small;}
 
+.sectionTitle {
+  width: 100%;
+  margin: $gutter*2.5 0;
+  text-align: center;
+}
+
+/*  #Backgrounds */
+
+.darkbackground {
+  background-color: $colorBodyText;
+}
+
+.lightbackground {
+  background-color: rgba(235, 235, 235, .19);
+}
+
+.brightbackground {
+  background-color: $colorButtonPrimary;
+}
+
+.bordered {
+  border-top: 1px solid $colorBeige;
+  border-bottom: 1px solid $colorBeige;
+}
 
 /*  #Links and Buttons */
 
@@ -799,7 +823,6 @@ img.full {
 /* #Site Header */
 
 .metaheader {
-  background: $colorBodyText;
   padding: 0;
 
   a {
@@ -1055,7 +1078,9 @@ img.full {
 /* Callout */
 
 .callout-cta {
-  background: $colorButtonPrimary url('img/weed-bg.png') left center no-repeat;
+  background-image: url('img/weed-bg.png');
+  background-position: left center;
+  background-repeat: no-repeat;
   background-size: contain;
   padding-top: ($gutter * .8);
   padding-bottom: ($gutter * .8);
@@ -1161,12 +1186,38 @@ img.full {
   }
 }
 
+/* #Grid Listings */
+
+.grid-list {
+  padding: ($gutter*2.5) 0;
+
+  .grid-item {
+    background: #fff;
+    border: 1px solid $colorBeige;
+    border-radius: $borderRadius;
+    box-shadow: 0px 5px 15px rgba(0,0,0, .1);
+    img {
+      padding: $gutter/4;
+    }
+
+    .grid-content {
+      padding: $gutter/2;
+
+      text-align: left;
+      h3 {
+        margin-top: 0;
+      }
+    }
+    img + .grid-content {
+      border-top: 1px solid $colorBeige;
+    }
+
+  }
+}
+
 /* #Products */
 
 .product-grid {
-  background: rgba(235, 235, 235, .19);
-  border-top: 1px solid $colorBeige;
-  border-bottom: 1px solid $colorBeige;
   padding: ($gutter*2.5) 0;
 
 
@@ -1228,7 +1279,6 @@ img.full {
 /* #Events Content */
 
 .events-carousal {
-  background: $colorBodyText;
   padding: ($gutter) 0 ($gutter*1.8);
   color: $colorBeige;
 
@@ -1424,7 +1474,7 @@ footer {
 /*  #Signup */
 
 .signup {
-  background: $colorBodyText url(img/signup-icon.png);
+  background-image: url(img/signup-icon.png);
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
