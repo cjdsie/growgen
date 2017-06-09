@@ -1334,20 +1334,47 @@ footer {
     }
     .facebook {
       background: #4990E2;
+      a {
+        color: #fff;
+        &:hover {
+          color: #fff;
+          i {
+            color: #fff;
+          }
+        }
+      }
       &:hover {
         background: darken(#4990E2, 20%);
         color: #fff;
       }
     }
-    .twitter {
-      background: #92BF2D;
+    .youtube {
+      background: #E62117;
+      a {
+        color: #fff;
+        &:hover {
+          color: #fff;
+          i {
+            color: #fff;
+          }
+        }
+      }
       &:hover {
-        background: darken(#92BF2D, 20%);
+        background: darken(#E62117, 20%);
         color: #fff;
       }
     }
     .instagram {
       background: #F2A13B;
+      a {
+        color: #fff;
+        &:hover {
+          color: #fff;
+          i {
+            color: #fff;
+          }
+        }
+      }
       &:hover {
         background: darken(#F2A13B, 20%);
         color: #fff;
@@ -1359,6 +1386,7 @@ footer {
     label {
       margin-bottom: 10px;
       display: block;
+      text-align: left;
     }
   }
   .input-group {
