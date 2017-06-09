@@ -816,7 +816,41 @@ img.full {
   }
 }
 
+/* #Inputs */
 
+input,
+select,
+textarea {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.input-group {
+  input,
+  select {
+      height: 40px;
+      padding: 10px;
+      font-family: $fontBody;
+      font-size: 1.4rem;
+      border: 1px solid $colorBeige;
+      color: $colorBodyText;
+      margin-bottom: $gutter/2;
+  }
+  textarea {
+    padding: 10px;
+    font-family: $fontBody;
+    font-size: 1.4rem;
+    margin-bottom: $gutter/2;
+    border: 1px solid $colorBeige;
+    color: $colorBodyText;
+  }
+
+}
+
+.input-full {
+  width: 100%;
+}
 
 
 
