@@ -1382,6 +1382,25 @@ textarea {
   }
 }
 
+.breadcrumb {
+  margin: 0;
+  margin-bottom: 20px;
+  list-style: none;
+
+    &>li {
+      display: inline-block;
+
+      &.active {
+        color: $colorBodyText;
+      }
+    }
+    &>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+}
+
 /* #Events Content */
 
 .events-carousal {
