@@ -963,6 +963,7 @@ textarea {
 
   li {
     padding: 5px 20px;
+    position: relative;
 
     &:last-of-type {
       padding-right: 0;
@@ -972,6 +973,41 @@ textarea {
       &:hover {
         color: $colorButtonPrimary;
       }
+    }
+    &.has-submenu {
+
+      &:after {
+        content: "\f107";
+        font-family: fontAwesome;
+        padding-left: 10px;
+      }
+
+      .submenu {
+        display: none;
+        min-width: 250px;
+        background: #fff;
+        text-align: left;
+        box-shadow: 0 2px 5px rgba($colorBodyText, .2);
+        position: absolute;
+        top: 30px;
+        left: 0;
+        z-index: 1000;
+
+
+        li {
+          display: block;
+
+        }
+      }
+      &:hover {
+        .submenu {
+          display: block;
+          -moz-animation: fadeIn .3s ease-in ;
+          -webkit-animation: fadeIn .3s ease-in ;
+          animation:fadeIn .3s ease-in ;
+        }
+      }
+
     }
   }
   &.desktop-nav {
@@ -1059,6 +1095,9 @@ textarea {
   font-size: 1.85rem;
   overflow-y: scroll;
   background-color: $colorBeige;
+  -moz-animation: zoomIn .3s ease-in ;
+  -webkit-animation: zoomIn .3s ease-in ;
+  animation:zoomIn .3s ease-in ;
 
   li {
     border-bottom:2px solid $colorBeige;
