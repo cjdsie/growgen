@@ -1057,19 +1057,60 @@ textarea {
   width: 95%;
   text-align: center;
   font-size: 1.85rem;
+  overflow-y: scroll;
+  background-color: $colorBeige;
 
-  li a {
-    text-transform: uppercase;
-    font-weight: 600;
-    &:hover {
-      color: darken($colorButtonPrimary, 20%);
-      text-decoration: underline;
-    }
-    &:focus,
-    &:active {
-      outline: none;
+  li {
+    border-bottom:2px solid $colorBeige;
+    a {
+      display: block;
+      position: relative;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: $gutter/2;
+	    transition-property:all .2s linear 0s;
+	    -moz-transition:all .2s linear 0s;
+	    -webkit-transition:all .2s linear 0s;
+	    -o-transition:all .2s linear 0s;
+      &:hover {
+        color: darken($colorButtonPrimary, 20%);
+        text-decoration: underline;
+      }
+      &:focus,
+      &:active {
+        outline: none;
+      }
+      &:first-child {
+        padding-top: $gutter/2;
+      }
+
     }
 
+    ul.submenu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      padding-bottom: $gutter/2;
+      li {
+        border: 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-transform: normal;
+        color: $colorBodyText;
+        margin-bottom: $gutter/4;
+
+        a {
+          color: $colorBodyText;
+          text-transform: none;
+          margin-bottom: 0;
+          padding: 0;
+
+          &:hover {
+            color: $colorButtonPrimary;
+          }
+        }
+      }
+    }
   }
 
 }
