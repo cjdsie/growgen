@@ -493,6 +493,7 @@ h5,
 h6 {
   font-family: $fontHeader;
   font-weight: $fontHeaderDefautlWeight;
+  margin-top: 0;
 
 }
 
@@ -1406,6 +1407,65 @@ textarea {
 
 .event-carousel .owl-carousel .owl-stage .active.center {
   opacity: 1;
+}
+
+/* #Well */
+
+.well {
+  background: #fff;
+  color: $colorBodyText;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.related-products-types {
+  border: 1px solid rgba($colorBodyText, .2);
+  border-radius: 2px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+
+  .related-products-header {
+    background: $colorBeige;
+    padding: $gutter/4;
+    margin-bottom: 0;
+  }
+
+  .related-product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: $gutter/3 $gutter/4;
+      border-bottom: 1px solid rgba($colorBodyText, .2);
+
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+}
+
+.related-products {
+  margin: $gutter 0;
+  padding: $gutter/4;
+
+  .related-products-header {
+
+  }
+
+  .related-product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .img-list-inline {
+      margin-bottom: $gutter/2;
+
+
+    }
+  }
 }
 
 /* #Site Footer */
