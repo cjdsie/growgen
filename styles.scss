@@ -1345,6 +1345,43 @@ textarea {
   padding: ($gutter*2.5) 0;
 }
 
+.filters {
+  margin-bottom: $gutter;
+
+  select {
+    border: 1px solid rgba($colorBodyText, .8);
+    font-size: 1.5rem;
+    margin-left: $gutter/6;
+    padding: $gutter/6;
+  }
+}
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+
+  >li {
+    display: inline;
+
+    a {
+      padding: 10px 16px;
+      font-size: 1.6rem;
+      line-height: 1.3333333;
+    }
+
+    &:first-child>a {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    &.active a {
+      color: $colorBodyText;
+    }
+  }
+}
+
 /* #Events Content */
 
 .events-carousal {
